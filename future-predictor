@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Life & Travel Predictor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: linear-gradient(135deg, #020617, #1e293b);
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px 15px;
+    }
+    h1 { font-size: 28px; }
+    button {
+      margin-top: 25px;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      background: #38bdf8;
+      color: #020617;
+      font-weight: bold;
+    }
+    #result {
+      margin-top: 30px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🔮 Tap Once</h1>
+<p>Your future • travel • life path</p>
+
+<button onclick="predict()">Reveal</button>
+
+<div id="result"></div>
+
+<script>
+const results = [
+  "You will travel outside your country within 2–4 years 🌍",
+  "Your biggest life change happens after age 29 🔁",
+  "You will live in a different city one day 🏙️",
+  "Your future improves when you stop delaying ⏳",
+  "Money comes after a difficult decision 💰",
+  "A new opportunity appears within 12 months ✨",
+  "Your life path changes faster than you expect ⚡"
+];
+
+function predict() {
+  const r = Math.floor(Math.random() * results.length);
+  document.getElementById("result").innerText = results[r];
+}
+</script>
+
+</body>
+</html>
